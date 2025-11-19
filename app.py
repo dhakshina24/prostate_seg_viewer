@@ -133,7 +133,7 @@ if selected_page == "MRI Viewer":
     for col, (label, data, img) in zip([col1, col2, col3], modalities):
         with col:
             st.markdown(f"<h4 style='text-align: center;'>{label}</h4>", unsafe_allow_html=True)
-            st.image(img[slice_idx, :, :])
+            st.image(img[slice_idx, :, :], use_column_width=True)
 
             # Display metadata in sidebar
             with st.sidebar.expander(label, expanded=False):
